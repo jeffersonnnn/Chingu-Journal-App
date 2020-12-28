@@ -34,8 +34,14 @@ app.use(
   })
 );
 
-// Serve static files from React build
-app.use(express.static(path.join(__dirname, "client/build")));
+if (process.env.NODE_ENV === 'production') {
+  // Serve static files from React build
+  app.use(express.static(path.join(__dirname, "client/build")));
+
+  app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname + "/client/build/index.html"));
+  });
+}
 
 app.use("/api", expressjwt({ secret: process.env.SECRET, algorithms: ['HS256'], }));
 
@@ -49,10 +55,6 @@ app.use((err, req, res, next) => {
     res.status(err.status);
   }
   return res.send({ message: err.message });
-});
-
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });
 
 app.listen(PORT, () => {
