@@ -9,7 +9,7 @@ This application is developed with **MERN** (Mongo DB, Express JS, React & Node 
 
 To install and run this application start with cloning this repository to your machine with the command:
 
-    (Repo name here) 
+    https://github.com/jeffersonnnn/Chingu-Journal-App
 
 After this, install the dependencies required for the server with command:
 
