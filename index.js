@@ -14,7 +14,7 @@ const app = express();
 mongoose.set("useCreateIndex", true);
 mongoose.Promise = global.Promise;
 mongoose
-  .connect(process.env.MONGO_DB_CONNECTION, {
+  .connect('process.env.MONGO_DB_CONNECTION', {
     useNewUrlParser: true,
     useMongoClient: true,
     useUnifiedTopology: true,
