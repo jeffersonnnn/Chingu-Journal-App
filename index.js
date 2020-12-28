@@ -14,7 +14,7 @@ const app = express();
 mongoose.set("useCreateIndex", true);
 mongoose.Promise = global.Promise;
 mongoose
-  .connect(process.env.MLAB_URI, {
+  .connect(process.env.MONGO_DB_CONNECTION, {
     useNewUrlParser: true
   })
   .then(

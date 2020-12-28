@@ -15,7 +15,7 @@ After this, install the dependencies required for the server with command:
 
     npm install
 
-Since this a test project, the mlab credentials and JWT secret are available in the .env file which is excluded from .gitignore. This is for **testing only**. Production version will not contain the .env file. Next run the command:
+Since this a test project, the mongodb credentials and JWT secret are available in the .env file which is excluded from .gitignore. This is for **testing only**. Production version will not contain the .env file. Next run the command:
 
     npm run dev
 
