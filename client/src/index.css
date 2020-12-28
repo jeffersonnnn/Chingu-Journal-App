@@ -1,0 +1,25 @@
+/* landing Page Styles */
+
+.content-wrapper {
+  min-height: 100%;
+  margin-top: 100px;
+}
+
+/* Sign up & Login Styles */
+
+.vpnStyle {
+  display: block;
+  margin: auto;
+}
+
+/* Form style for Journal entry fields*/
+
+.titlePadding {
+  padding-left: 0.5em;
+}
+
+/* Card styles for notes list*/
+
+.cardHeadStyle {
+  background: #eeeeee;
+}
