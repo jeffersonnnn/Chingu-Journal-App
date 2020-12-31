@@ -26,9 +26,7 @@ mongoose
       console.log("Cannot connect to database + ", err);
     }
   );
-
-  console.log(process.env.MONGODB_URI, '-----');
-
+console.log(process.env.SECRET);
 app.use(cors());
 app.use(bodyParser.json());
 app.use(
