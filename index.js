@@ -14,9 +14,9 @@ const app = express();
 mongoose.set("useCreateIndex", true);
 mongoose.Promise = global.Promise;
 mongoose
-  .connect('process.env.MONGODB_URI', {
-    useNewUrlParser: true,
+  .connect(process.env.MONGODB_URI, {
     useUnifiedTopology: true,
+    useNewUrlParser: true
   })
   .then(
     () => {
@@ -26,6 +26,8 @@ mongoose
       console.log("Cannot connect to database + ", err);
     }
   );
+
+  console.log(process.env.MONGODB_URI, '-----');
 
 app.use(cors());
 app.use(bodyParser.json());
